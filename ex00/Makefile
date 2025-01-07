@@ -3,6 +3,8 @@ BraiiiiiiinnnzzzZ= BraiiiiiiinnnzzzZ
 
 SRC = 	main.cpp \
 	Zombie.cpp \
+	randomChump.cpp \
+	newZombie.cpp
 
 CXX = c++ 
 
