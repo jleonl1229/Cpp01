@@ -33,48 +33,48 @@ int	main(int ac, char **av)
 	{
 		std::cout << line << std::endl;
 		int		i;
-		std::string	milestone;
+		std::string	piece;
 
-		milestone = "";
+		piece = "";
 		i = 0;
 		while (line[i])
 		{
 			if (line[i] != ' ')
-				milestone += line[i];		
+				piece += line[i];		
 			else if (line[i] == ' ')
 			{
-				if (milestone[milestone.length() - 1] == '\n')
+				if (piece[piece.length() - 1] == '\n')
 				{
-					std::string	polishedmilestone;
+					std::string	polishedpiece;
 
-					polishedmilestone = milestone.substr(0, milestone.length() - 1);
-					if (polishedmilestone == s1)
+					polishedpiece = piece.substr(0, piece.length() - 1);
+					if (polishedpiece == s1)
 						newfile << s2;
 				}
-				if (milestone == s1)
+				if (piece == s1)
 					newfile << s2;
 				else
-					newfile << milestone;
-				milestone = "";
+					newfile << piece;
+				piece = "";
 				newfile << ' ';
 			}
 			i++;
 		}
-		if (milestone != "")
+		if (piece != "")
 		{
-			if (milestone[milestone.length() - 1] == '\n')
+			if (piece[piece.length() - 1] == '\n')
 			{
-				std::string	polishedmilestone;
+				std::string	polishedpiece;
 			       
-				polishedmilestone = milestone.substr(0, milestone.length() - 1);
-				if (polishedmilestone == s1)
+				polishedpiece = piece.substr(0, piece.length() - 1);
+				if (polishedpiece == s1)
 					newfile << s2;
 			}
-			if (milestone == s1)
+			if (piece == s1)
 				newfile << s2;
 			else
-				newfile << milestone;
-			milestone = "";
+				newfile << piece;
+			piece = "";
 		}	
 		newfile << '\n';
 	}
